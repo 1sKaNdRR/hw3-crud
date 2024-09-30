@@ -1,4 +1,4 @@
-import * as authServices from "../services/auth.js";
+import * as contactServices from "../services/contacts.js";
 
 const setupSession = (res, session) => {
     res.cookie("refreshToken", session.refreshToken, {
@@ -14,7 +14,7 @@ const setupSession = (res, session) => {
 
 
 export const registerController = async(req, res)=> {
-    const newUser = await authServices.register(req.body);
+    const newUser = await contactServices.register(req.body);
 
     res.status(201).json({
         status: 201,
@@ -24,7 +24,7 @@ export const registerController = async(req, res)=> {
 };
 
 export const loginController = async(req, res)=> {
-    const session = await authServices.login(req.body);
+    const session = await contactServices.login(req.body);
 
     res.cookie("refreshToken", session.refreshToken, {
         httpOnly: true,
@@ -47,7 +47,7 @@ export const loginController = async(req, res)=> {
 
 export const refreshController = async(req, res)=> {
     const {refreshToken, sessionId} = req.cookies;
-    const session = await authServices.refreshSession({refreshToken, sessionId});
+    const session = await contactServices.refreshSession({refreshToken, sessionId});
     
     setupSession(res, session);
 
@@ -63,7 +63,7 @@ export const refreshController = async(req, res)=> {
 export const logoutController = async(req, res)=> {
     const {sessionId} = req.cookies;
     if(sessionId) {
-        await authServices.logout(sessionId);
+        await contactServices.logout(sessionId);
     }
 
     res.clearCookie("sessionId");
