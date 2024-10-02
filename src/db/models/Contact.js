@@ -1,5 +1,6 @@
 import { Schema, model } from 'mongoose';
 import { enumList } from '../../constants/contacts.js';
+
 import { handleSaveError } from './hooks.js';
 const contactSchema = new Schema(
   {
