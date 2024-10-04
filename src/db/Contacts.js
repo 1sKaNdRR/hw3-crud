@@ -1,7 +1,8 @@
 import { Schema, model } from 'mongoose';
-import { enumList } from '../../constants/contacts.js';
+import { contactList } from '../constants/contacts.js';
 
 import { handleSaveError } from './hooks.js';
+
 const contactSchema = new Schema(
   {
     name: {
@@ -23,7 +24,7 @@ const contactSchema = new Schema(
     },
     contactType: {
       type: String,
-      enum: enumList,
+      enum: contactList,
       required: [true, 'contactType must be exist'],
       default: 'personal',
     },

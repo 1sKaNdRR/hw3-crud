@@ -1,1 +1,1 @@
-export const enumList = ["personal", "home"];
+export const contactList = ["personal", "home"];
