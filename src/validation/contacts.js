@@ -9,6 +9,7 @@ export const contactAddSchema = Joi.object({
   contactType: Joi.string()
     .valid(...enumList)
     .required(),
+  photo: Joi.string().uri(),
 });
 
 export const contactUpdateSchema = Joi.object({
@@ -17,4 +18,5 @@ export const contactUpdateSchema = Joi.object({
   email: Joi.string().email(),
   isFavorite: Joi.boolean(),
   contactType: Joi.string().valid(...enumList),
+  photo: Joi.string().uri(),
 }).min(1);
