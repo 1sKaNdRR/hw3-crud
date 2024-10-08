@@ -97,8 +97,8 @@ export const upsertContactController = async (req, res) => {
 
 export const patchContactController = async (req, res) => {
   const { id } = req.params;
-  const { _id: userId } = req.user;
 
+  
   let photo;
   if (req.file) {
     if (enableCloudinary === 'true') {
@@ -111,7 +111,7 @@ export const patchContactController = async (req, res) => {
   const updateData = { ...req.body, photo };
 
   const result = await contactServices.updateContact(
-    { _id: id, userId },
+    { _id: id},
     updateData,
   );
 

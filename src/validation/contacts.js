@@ -19,4 +19,4 @@ export const contactUpdateSchema = Joi.object({
   isFavorite: Joi.boolean(),
   contactType: Joi.string().valid(...enumList),
   photo: Joi.string().uri(),
-}).min(1);
+});
