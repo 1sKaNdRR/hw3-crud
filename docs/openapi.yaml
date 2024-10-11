@@ -12,7 +12,7 @@ tags:
   - name: Auth
     description: Auth operations.
 servers:
-  - url: http://localhost:3000
+  - url: https://hw3-crud-5.onrender.com/
   - url: https://contacts-app-3lrz.onrender.com
 paths:
   /contacts:
