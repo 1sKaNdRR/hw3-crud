@@ -18,7 +18,7 @@ const contactSchema = new Schema(
     isFavorite: {
       type: Boolean,
       default: false,
-      require: [true, 'isFavorite must be exist'],
+      required: false,
     },
     contactType: {
       type: String,
