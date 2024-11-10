@@ -12,7 +12,6 @@ import swaggerDocs from './middlewares/swaggerDocs.js';
 
 export const setupServer = () => {
   const app = express();
-
   app.use(logger);
   app.use(cors());
   app.use(express.json());
@@ -26,8 +25,5 @@ export const setupServer = () => {
   app.use(notFoundHandler);
   app.use(errorHandler);
   const port = Number(env('PORT', 3000));
-
-  
-
   app.listen(port, () => console.log(`Server running on port 3000`));
 };
