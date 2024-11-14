@@ -37,7 +37,7 @@ requestBody:
           isFavorite:
             description: 'Favorite contact'
             type: boolean
-            example: true
+            example: false
           contactType:
             description: 'Which group contact belongs to'
             type: string
