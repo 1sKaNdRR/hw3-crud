@@ -14,6 +14,7 @@ tags:
 servers:
   - url: https://hw3-crud-6.onrender.com/
   - url: https://contacts-app-3lrz.onrender.com
+
 paths:
   /contacts:
     get:
