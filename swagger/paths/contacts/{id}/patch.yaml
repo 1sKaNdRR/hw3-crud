@@ -39,10 +39,6 @@ requestBody:
             type: string
             enum: ['work', 'home', 'personal']
             example: 'work'
-          userId:
-            description: "Contact's parent id"
-            type: string
-            example: 66e44f1689959db712a689b6
           photo:
             description: "Link to contact's photo"
             type: string

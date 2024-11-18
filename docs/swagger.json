@@ -219,11 +219,6 @@
                     ],
                     "example": "work"
                   },
-                  "userId": {
-                    "description": "Contact's parent id",
-                    "type": "string",
-                    "example": "66e44f1689959db712a689b6"
-                  },
                   "photo": {
                     "description": "Link to contact's photo",
                     "type": "string",
@@ -343,11 +338,6 @@
                       "personal"
                     ],
                     "example": "work"
-                  },
-                  "userId": {
-                    "description": "Contact's parent id",
-                    "type": "string",
-                    "example": "66fe6d0b5b7ffb5c70dfd498"
                   },
                   "photo": {
                     "description": "Link to contact's photo",
@@ -544,8 +534,7 @@
           "_id",
           "name",
           "phoneNumber",
-          "contactType",
-          "userId"
+          "contactType"
         ],
         "properties": {
           "_id": {
@@ -582,11 +571,6 @@
               "personal"
             ],
             "example": "work"
-          },
-          "userId": {
-            "description": "Contact's parent id",
-            "type": "string",
-            "example": "66d1a08277df1f701522be39"
           }
         }
       }
